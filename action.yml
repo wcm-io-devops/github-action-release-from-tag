@@ -1,0 +1,20 @@
+name: Maven Build with SonarCloud
+description: Composite GitHub Action that verifies a Maven Build and analyzes the results in SonarCloud
+
+inputs:
+  body:
+    description: Body text for the release.
+    required: false
+  github-token:
+    description: GITHUB_TOKEN secret
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - uses: actions/checkout@v6
+    - uses: ncipollo/release-action@v1
+      with:
+        body: ${{ inputs.body }}
+        token: ${{ inputs.github-token }}
