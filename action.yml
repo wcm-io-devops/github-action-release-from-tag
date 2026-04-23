@@ -1,5 +1,5 @@
-name: Maven Build with SonarCloud
-description: Composite GitHub Action that verifies a Maven Build and analyzes the results in SonarCloud
+name: Release from Tag
+description: Composite GitHub Action that creates a GitHub release from a tag.
 
 inputs:
   body:
